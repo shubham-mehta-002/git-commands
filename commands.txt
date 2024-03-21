@@ -1,3 +1,17 @@
+git 
+
+--> BRANCHES
+
+
+- git branch  :  to tell which is current branch
+- git branch -m master : to rename a branch
+- git checkout -b feature1: to switch to a new branch ie basically create a new branch
+- git checkout feature1 : already in feature1 ie this is used to switch between branches
+- git status : to check if any file in repo is modified or not present
+- git branch -b feature1 :  to delete a branch
+- 
+
+
 ##  WHEN A REPO IS CREATED ON GITHUB AND WE MAKE A CLONE OF THAT IN OUR SYSTEM
 
 -> first create a repo on github
@@ -21,9 +35,9 @@
 -> same as status,push,add,commit   **but these do changes only at local level and not in github , so we need our next commands for that
 -> git remote add origin [https link of the repo]
 -> git remote -v :  to check which remote repo we are talking about
--> git branch : to check which branch we are working on      // by default, master is the branhc but on github it is renamed as main so we rename this mater as man acc to industry standards
+-> git branch : to check which branch we are working on      // by default, master is the branch but on github it is renamed as main so we rename this master as man acc to industry standards
 -> git branch -M main : to rename a branch
--> git push -u origin main : this -u means that in future also we are working on same project, so we dont need to write origin main in next push ie we use only git push in next git pushes
+-> git push -u origin main : this -u means that in future also we are working on same project, so we do not need to write origin main in next push ie we use only git push in next git pushes
 
 
 
@@ -39,26 +53,31 @@
 ## MERGE BRANCHES
    
 Method-1: PULL REQUEST IN GITHUB
--> new when we do PR, then the data is updated on the remote and not on the local , so we need to create a pull request in that case
--> git pull origin main : used to fetch and download and update local repo
+-> new when we do PR, then the data is updated on the remote and not on the local, so we need to create a pull request in that case
+-> git pull origin main: used to fetch and download and update local repo
 
-Method-2 : USING COMMAND LINE
--> git diff [branch name] : to compare commits,files , branches , ...
--> git merge [branch name other that current]  :  to merge 2 braches
+Method-2: USING COMMAND LINE
+-> git diff [branch name]: to compare commits, files, branches, ...
+-> git merge [branch name other than current]:  to merge 2 branches
 
 
 ## UNDOING CHANGES
 
 case 1: STAGED CHANGES (added but not committed)
--> git reset [file name] : for a particular file
--> git reset : for all files
+-> git reset [file name]: for a particular file
+-> git reset: for all files
 
 case 2: COMMITTED CHANGES(for one commit)
 -> git reset HEAD~1 :  head means the last commit and ~1 means undo last commits by one
-	**git log :  to see history of all commits and their hash codes
+	**git log:  to see the history of all commits and their hash codes
 case 3: COMMITTED CHANGES(for many commit)
--> git reset [commit hash] : used to go back to a specified commit hash but not from vs code
--> git reser --hard [commit hash] : same as above + changes will be undine from vs code too
+-> git reset [commit hash]: used to go back to a specified commit hash but not from vs code
+-> git reset --hard [commit hash] : same as above + changes will be undine from vs code too
+
+
+
+## FORK
+
 
 
 
